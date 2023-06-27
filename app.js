@@ -1,17 +1,8 @@
-/*
-	Import libraries
-*/
 require('dotenv').config();
 const TelegramBot = require('node-telegram-bot-api');
 const TELEGRAM_TOKEN = process.env.TELEGRAM_TOKEN;
 const CharacterAI = require('node_characterai');
 const characterAI = new CharacterAI();
-
-
-/*
-	Processing
-*/
-
 
 
 const bot = new TelegramBot(TELEGRAM_TOKEN, {polling: true});
@@ -22,8 +13,15 @@ bot.setWebHook(process.env.WEBHOOK_URL);
 bot.onText(/\/start/, async (msg, match) => {
 	let chatId = msg.chat.id;
 	
-	bot.sendMessage(chatId, "Xin chào, tôi là Kerros - Một trợ lí ảo!");
+	bot.sendMessage(chatId, "Xin chào, tôi là Kerros! Tôi sẽ là người trò chuyện cùng bạn.");
 	
+	
+});
+
+bot.onText(/\/version/, async (msg, match) => {
+	let chatId = msg.chat.id;
+	
+	bot.sendMessage(chatId, "Phiên bản hiện tại là: 1.0.0.");
 	
 });
 
