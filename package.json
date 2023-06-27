@@ -1,0 +1,29 @@
+{
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "node_characterai": "^1.1.4",
+    "node-telegram-bot-api": "^0.61.0"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "gpt-for-telegram",
+  "description": "A GPT bot for Telegram using NodeJS",
+  "version": "1.0.0",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kennex666/gpt-for-telegram.git"
+  },
+  "keywords": [
+    "bot",
+    "for",
+    "telegram"
+  ],
+  "author": "Duong Thai Bao",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kennex666/gpt-for-telegram/issues"
+  },
+  "homepage": "https://github.com/kennex666/gpt-for-telegram#readme"
+}

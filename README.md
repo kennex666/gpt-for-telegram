@@ -13,4 +13,15 @@ A GPT bot for Telegram using NodeJS
 
 Run this command first:
 ```shell
-$ npm install openai node-telegram-bot-api dotenv
+$ npm install node-telegram-bot-api dotenv node_characterai
+```
+
+Setup your token at `.env` 
+
+## Run the bot
+
+Type command:
+```
+$ node server.js
+```
+
