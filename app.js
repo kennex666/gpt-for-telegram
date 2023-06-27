@@ -12,9 +12,6 @@ const characterAI = new CharacterAI();
 	Processing
 */
 
-(async() => {
-	await characterAI.authenticateAsGuest();
-})();
 
 
 const bot = new TelegramBot(TELEGRAM_TOKEN, {polling: true});
@@ -37,6 +34,7 @@ bot.onText(/(.+)/, async (msg, match) => {
 	let answer = "";
 	
 	(async() => {
+		await characterAI.authenticateAsGuest();
 		const characterId = "gj6Fzgn1XOO3j7Dw8yjvdfqHXBB5nJza7aQlU_t2CQg";
 
 		const chat = await characterAI.createOrContinueChat(characterId);
