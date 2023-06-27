@@ -22,6 +22,6 @@ Setup your token at `.env`
 
 Type command:
 ```
-$ node server.js
+$ node app.js
 ```
 
