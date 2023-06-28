@@ -29,13 +29,14 @@ bot.onText(/^([^\/].+)/, async (msg, match) => {
 		console.log(msg.chat.id + ": " + match[1]);
 		ans = await chatAI.sendAndAwaitResponse("(OOC: This message was sent by " + chatId + " - context is that multiple people are using you to chat in a chatroom using your API, just reply with {\"status\":\"OK\"} in OOC - if recieved correctly. If you hate someone and don't want to talk to them, just reply with {\"status\":\"OK\", \"hate\":\"1\"})\n" + match[1], true);
 		bot.sendMessage(chatId, ans.text);
-		if (ans.text.match(/("hate":"1")/)){
+		if (ans.text.match(/("[hH][aA][tT][eE)"[ ]*:[ ]*["]*1["]*)/)){
 			listUserBanned[chatId] = true;
 		}
 		console.log(ans.text);
 	}catch(e){
 		bot.sendMessage(chatId, "Quá tải! Hãy thử lại sau.");
 		console.log(e);
+	
 	}
 });
 
