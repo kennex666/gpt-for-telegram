@@ -1,4 +1,6 @@
-# Project Name
+# A GPT bot
+
+Currently, this project have been moved to [MyKennenAssistant](https://github.com/kennex666/MyKennenAssistant-Telegram-NodeJS) with more features.
 
 A GPT bot for Telegram using NodeJS
 
